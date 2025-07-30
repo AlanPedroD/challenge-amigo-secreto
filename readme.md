@@ -1,4 +1,4 @@
-# 🎉 Sorteio do Amigo Secreto
+# 🎉 Sorteador do amigo secreto!
 
 Aplicação feita com HTML, CSS e JavaScript para adicionar nomes de amigos e sorteá-los aleatoriamente, garantindo que nenhum nome seja sorteado mais de uma vez.
 
@@ -11,6 +11,9 @@ Aplicação feita com HTML, CSS e JavaScript para adicionar nomes de amigos e so
 - Foco automático no campo de entrada
 - Suporte à tecla **Enter** para adicionar nomes rapidamente
 - **Layout responsivo**: funciona bem em celulares, tablets e desktops
+
+![Prévia do projeto](./assets/images/img-amigo-secreto.gif)
+
 ## 🚀 Como usar
 
 1. Digite o nome de um amigo no campo e pressione **Enter** ou clique em **"Adicionar"**

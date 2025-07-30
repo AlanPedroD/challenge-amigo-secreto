@@ -3,7 +3,10 @@ let nomes = [];
 function adicionarAmigo() {
   let nome = document.getElementById('amigo').value.trim().toLowerCase();
 
-  if (nome === '') return;
+  if (nome === '') {
+    alert('Você precisa inserir um nome válido');
+    return;
+  }
 
   if (nomes.includes(nome)) {
     alert('Esse nome já foi adicionado!');
@@ -26,7 +29,7 @@ function sortearAmigo() {
   resultado.innerHTML = '';
 
   if (nomes.length === 0) {
-    resultado.innerHTML = '<li>Nenhum nome para sortear.</li>';
+    resultado.innerHTML = '<li>Nenhum nome para sortear</li>';
     return;
   }
 
