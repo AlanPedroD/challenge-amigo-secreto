@@ -1,4 +1,4 @@
-# 🎉 Sorteador de Amigos
+# 🎉 Sorteio do Amigo Secreto
 
 Aplicação feita com HTML, CSS e JavaScript para adicionar nomes de amigos e sorteá-los aleatoriamente, garantindo que nenhum nome seja sorteado mais de uma vez.
 
