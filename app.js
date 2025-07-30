@@ -1,11 +1,12 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
-// let botaoLimpar = document.querySelector('.button-clear');
+document.getElementById('amigo').focus();
 
 let nomes = [];
 
 function adicionarAmigo() {
-  let nome = document.getElementById('amigo').value.trim();
+  let nome = document.getElementById('amigo').value.trim().toLowerCase();
+
 
   if (nome === '') return;
 
@@ -18,7 +19,7 @@ function adicionarAmigo() {
 
   let lista = document.getElementById('listaAmigos');
   let itemLista = document.createElement('li');
-  itemLista.textContent = nome;
+  itemLista.textContent = capitalizar(nome);
   lista.appendChild(itemLista);
 
   limparCampo();
@@ -35,16 +36,32 @@ function sortearAmigo() {
     return;
   }
 
-  let nomeSorteado = nomes[Math.floor(Math.random() * nomes.length)];
+  // Sorteia um índice aleatório
+  let indice = Math.floor(Math.random() * nomes.length);
+  let nomeSorteado = nomes[indice];
 
+  // Remove o nome sorteado da lista
+  nomes.splice(indice, 1);
+
+  // Exibe o resultado
   let itemResultado = document.createElement('li');
-  itemResultado.textContent = `🎉 Amigo sorteado: ${nomeSorteado}`;
+  // itemResultado.textContent = `🎉 Amigo sorteado: ${nomeSorteado}`;
+  itemResultado.textContent = `🎉 Amigo sorteado: ${capitalizar(nomeSorteado)}`;
+
   resultado.appendChild(itemResultado);
+
 }
 
+
+// function limparCampo() {
+//   document.querySelector('input').value = '';
+// }
 function limparCampo() {
-  document.querySelector('input').value = '';
+  const input = document.getElementById('amigo');
+  input.value = '';
+  input.focus();
 }
+
 
 function limparLista() {
   nomes = [];
@@ -65,7 +82,9 @@ function esconderBotao(seletor, classe) {
     elemento.classList.remove(classe);
   }
 }
-
+function capitalizar(nome) {
+  return nome.charAt(0).toUpperCase() + nome.slice(1);
+}
 
 
 //! Anotações
