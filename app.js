@@ -1,12 +1,7 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-
-document.getElementById('amigo').focus();
-
 let nomes = [];
 
 function adicionarAmigo() {
   let nome = document.getElementById('amigo').value.trim().toLowerCase();
-
 
   if (nome === '') return;
 
@@ -26,7 +21,6 @@ function adicionarAmigo() {
   exporBotao(".button-clear", "button-aparece");
 }
 
-
 function sortearAmigo() {
   let resultado = document.getElementById('resultado');
   resultado.innerHTML = '';
@@ -36,38 +30,28 @@ function sortearAmigo() {
     return;
   }
 
-  // Sorteia um índice aleatório
   let indice = Math.floor(Math.random() * nomes.length);
   let nomeSorteado = nomes[indice];
 
-  // Remove o nome sorteado da lista
   nomes.splice(indice, 1);
 
-  // Exibe o resultado
   let itemResultado = document.createElement('li');
-  // itemResultado.textContent = `🎉 Amigo sorteado: ${nomeSorteado}`;
   itemResultado.textContent = `🎉 Amigo sorteado: ${capitalizar(nomeSorteado)}`;
-
   resultado.appendChild(itemResultado);
-
 }
 
-
-// function limparCampo() {
-//   document.querySelector('input').value = '';
-// }
 function limparCampo() {
   const input = document.getElementById('amigo');
   input.value = '';
   input.focus();
 }
 
-
 function limparLista() {
   nomes = [];
   document.getElementById('listaAmigos').innerHTML = '';
   document.getElementById('resultado').innerHTML = '';
   esconderBotao(".button-clear", "button-aparece");
+  limparCampo();
 }
 
 function exporBotao(seletor, classe) {
@@ -76,15 +60,30 @@ function exporBotao(seletor, classe) {
     elemento.classList.add(classe);
   }
 }
+
 function esconderBotao(seletor, classe) {
   const elemento = document.querySelector(seletor);
   if (elemento) {
     elemento.classList.remove(classe);
   }
 }
+
 function capitalizar(nome) {
-  return nome.charAt(0).toUpperCase() + nome.slice(1);
+  return nome
+    .split(' ')
+    .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+    .join(' ');
 }
+
+function verificaEnter(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    adicionarAmigo();
+  }
+}
+
+document.getElementById('amigo').focus();
+
 
 
 //! Anotações
