@@ -1,6 +1,6 @@
 # 🎉 Sorteador de Amigos
 
-Aplicação simples feita com HTML, CSS e JavaScript para adicionar nomes de amigos e sorteá-los aleatoriamente, garantindo que nenhum nome seja sorteado mais de uma vez.
+Aplicação feita com HTML, CSS e JavaScript para adicionar nomes de amigos e sorteá-los aleatoriamente, garantindo que nenhum nome seja sorteado mais de uma vez.
 
 ## ✨ Funcionalidades
 
