@@ -26,14 +26,6 @@ html, body {
   align-items: center;
 }
 
-/* body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .main-content {
     display: flex;
     flex-direction: column;
@@ -146,6 +138,8 @@ ul {
 }
 ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
