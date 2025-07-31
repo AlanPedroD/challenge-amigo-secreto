@@ -30,6 +30,7 @@ function sortearAmigo() {
 
   if (nomes.length === 0) {
     resultado.innerHTML = '<li>Nenhum nome para sortear</li>';
+    falarTexto('Nenhum nome para sortear');
     return;
   }
 
@@ -41,6 +42,7 @@ function sortearAmigo() {
   let itemResultado = document.createElement('li');
   itemResultado.textContent = `🎉 Amigo sorteado: ${capitalizar(nomeSorteado)}`;
   resultado.appendChild(itemResultado);
+  falarTexto(`O amigo sorteado foi: ${capitalizar(nomeSorteado)}`);
 }
 
 function limparCampo() {
@@ -85,8 +87,22 @@ function verificaEnter(event) {
   }
 }
 
-document.getElementById('amigo').focus();
+function falarTexto(texto, velocidade = 1, tom = 1) {
+  if (!'speechSynthesis' in window) {
+    console.warn('Este navegador não suporta síntese de voz');
+    return;
+  }
 
+  let mensagem = new SpeechSynthesisUtterance();
+  mensagem.text = texto;
+  mensagem.lang = 'pt-BR';
+  mensagem.rate = velocidade;
+  mensagem.pitch = tom;
+
+  speechSynthesis.speak(mensagem);
+}
+
+document.getElementById('amigo').focus();
 
 
 //! Anotações
