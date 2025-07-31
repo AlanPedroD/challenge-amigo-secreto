@@ -103,38 +103,3 @@ function falarTexto(texto, velocidade = 1, tom = 1) {
 }
 
 document.getElementById('amigo').focus();
-
-
-//! Anotações
-// 🧩 Math.random()
-// Gera um número decimal aleatório entre 0 (inclusive) e 1 (exclusivo).
-
-// Exemplo: 0.123, 0.6789, 0.99999
-
-// 🧩 Math.random() * nomes.length
-// Multiplica esse número aleatório pela quantidade de nomes.
-
-// Suponha que nomes.length = 3 → vai gerar algo entre 0 e 2.999.
-
-// Exemplo: 0.6789 * 3 = 2.0367
-
-// 🧩 Math.floor(...)
-// Arredonda para baixo o número decimal para o inteiro mais próximo.
-
-// Exemplo: Math.floor(2.0367) resulta em 2.
-
-// 🧩 nomes[...]
-// Agora temos um índice aleatório inteiro entre 0 e nomes.length - 1.
-
-// Usamos esse índice para acessar um elemento do array.
-
-// ✅ Resultado final:
-// A variável nomeSorteado recebe um nome aleatório do array nomes.
-
-// 🧠 Exemplo completo:
-// Se o array for:
-// let nomes = ['Maria', 'Carlos', 'Ana'];
-// E o número gerado for 0.76 →
-// 0.76 * 3 = 2.28 →
-// Math.floor(2.28) = 2 →
-// nomes[2] = 'Ana'
