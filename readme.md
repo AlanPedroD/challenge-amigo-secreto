@@ -28,4 +28,8 @@ Aplicação feita com HTML, CSS e JavaScript para adicionar nomes de amigos e so
 
 ---
 
+## 🔗 Teste você mesmo clicando no link abaixo:
+
+➡️ [Amigo Secreto](https://alanpedrod.github.io/conselhos-do-dia/)
+
 Desenvolvido como projeto prático para treinar lógica e manipulação de DOM com JavaScript.
